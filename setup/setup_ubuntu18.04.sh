@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# setup.sh
+# setup_ubuntu18.04.sh
 # 2019/09/10
 # for ubuntu 18.04
 
-# if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu.sh"
+# if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu18.04.sh"
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
