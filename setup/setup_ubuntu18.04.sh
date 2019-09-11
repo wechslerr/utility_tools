@@ -85,6 +85,7 @@ cd gdb-switcher
 sudo ./install.sh
 sudo ./setup.sh
 
+source ~/.bashrc
 cd $HOME
 
 # chsh -s /usr/bin/zsh
