@@ -1,11 +1,23 @@
 #!/bin/sh
 
-# setup_ubuntu18.04.sh
-# for ubuntu
+# setup_ubuntu_16.04.sh
+# for ubuntu <= 16.04
 
-# if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu18.04.sh"
+# if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu_16.04.sh"
 
 # When the license agreement for cmake appears, enter q, y, y
+
+cd $HOME
+sudo add-apt-repository ppa:webupd8team/terminix -y
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update -y
+sudo apt-get install tilix -y
+
+sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
+git clone https://github.com/longld/peda.git ~/peda
+mkdir $HOME/bin
+wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
+chmod +x $HOME/bin/rp
 
 mkdir install
 cd install
@@ -17,13 +29,6 @@ sudo mv cmake-3.15.3-Linux-x86_64 /opt
 rm -rf cmake-3.15.3-Linux-x86_64
 sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
-sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
-git clone https://github.com/longld/peda.git ~/peda
-echo export PATH=$HOME/bin:$PATH >> ~/.bashrc
-mkdir $HOME/bin
-wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
-chmod +x $HOME/bin/rp
-
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
@@ -32,7 +37,6 @@ mkdir $HOME/tools
 mkdir $HOME/tools/Stegsolve
 cd $HOME/tools
 git clone https://github.com/volatilityfoundation/volatility
-git clone https://github.com/sqlmapproject/sqlmap
 wget http://www.caesum.com/handbook/Stegsolve.jar -O $HOME/tools/Stegsolve/stegsolve.jar
 chmod +x stegsolve.jar
 echo -e '#!/bin/sh\njava -jar Stegsolve.jar' > $HOME/tools/Stegsolve/run
@@ -40,6 +44,10 @@ echo -e '#!/bin/sh\njava -jar Stegsolve.jar' > $HOME/tools/Stegsolve/run
 cd $HOME
 wget https://github.com/radareorg/cutter/releases/download/v1.9.0/Cutter-v1.9.0-x64.Linux.AppImage
 chmod +x Cutter-v1.9.0-x64.Linux.AppImage
+
+cd $HOME
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 cd $HOME
 git clone https://github.com/radare/radare2
@@ -83,15 +91,12 @@ sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libgli
 yes | python3 -m pip install -r requirements.txt
 
 cd $HOME
-sudo add-apt-repository ppa:webupd8team/terminix -y
-sudo apt-get update -y
-sudo apt-get install tilix -y
+git clone https://github.com/scwuaptx/Pwngdb
+cp ~/Pwngdb/.gdbinit ~/.gdbinit_peda
+cp ~/Pwngdb/.gdbinit ~/.gdbinit
 
 cd $HOME
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
 
-cd $HOME
 sudo echo source ~/gef/gef.py > .gdbinit_gef
 sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
 

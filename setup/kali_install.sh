@@ -1,11 +1,16 @@
 #!/bin/sh
 
-# setup_ubuntu18.04.sh
-# for ubuntu
+# if you copy setup.sh from windows to kali, you need "sed -i 's/\r//' kali_install.sh"
 
-# if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu18.04.sh"
+sudo add-apt-repository ppa:webupd8team/terminix -y
+sudo apt-get update -y
+sudo apt-get install tilix -y
 
-# When the license agreement for cmake appears, enter q, y, y
+sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
+git clone https://github.com/longld/peda.git ~/peda
+mkdir $HOME/bin
+wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
+chmod +x $HOME/bin/rp
 
 mkdir install
 cd install
@@ -17,25 +22,9 @@ sudo mv cmake-3.15.3-Linux-x86_64 /opt
 rm -rf cmake-3.15.3-Linux-x86_64
 sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
-sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
-git clone https://github.com/longld/peda.git ~/peda
-echo export PATH=$HOME/bin:$PATH >> ~/.bashrc
-mkdir $HOME/bin
-wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
-chmod +x $HOME/bin/rp
-
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
-
-mkdir $HOME/tools
-mkdir $HOME/tools/Stegsolve
-cd $HOME/tools
-git clone https://github.com/volatilityfoundation/volatility
-git clone https://github.com/sqlmapproject/sqlmap
-wget http://www.caesum.com/handbook/Stegsolve.jar -O $HOME/tools/Stegsolve/stegsolve.jar
-chmod +x stegsolve.jar
-echo -e '#!/bin/sh\njava -jar Stegsolve.jar' > $HOME/tools/Stegsolve/run
 
 cd $HOME
 wget https://github.com/radareorg/cutter/releases/download/v1.9.0/Cutter-v1.9.0-x64.Linux.AppImage
@@ -101,13 +90,44 @@ cd libc-database
 ./get
 
 cd $HOME
+mkdir powershell
+cd powershell
+git clone https://github.com/cheetz/Easy-P
+git clone https://github.com/PowerShellMafia/PowerSploit
+git clone https://github.com/samratashok/nishang
+
+cd $HOME
+apt-get install gobuster -y
+apt-get install filezilla -y
+apt-get install alacarte -y
+
+cd $HOME
+mkdir tools
+cd tools
+git clone https://github.com/internetwache/GitTools
+git clone https://github.com/DFC302/reverseme
+git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester
+git clone https://github.com/pentestmonkey/unix-privesc-check
+git clone https://github.com/mzet-/linux-exploit-suggester
+git clone https://github.com/jondonas/linux-exploit-suggester-2
+git clone https://github.com/rebootuser/LinEnum
+
+cd $HOME
+cp /etc/resolv.conf resolv.conf.bak
+
+cd $HOME
+git clone https://github.com/Yunolay/msfvenom_maker
+cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
+chmod +x $HOME/bin/msfvenom_maker
+
+cd $HOME
 
 # chsh -s /usr/bin/zsh
 
 # you shoud write these in ~/.bashrc
 
 << COMMENTOUT
-export PATH=$HOME/bin:$PATH >> ~/.bashrc
+export PATH=$HOME/bin:$PATH
 alias gef="gdb --nh -ix ~/.gdbinit_gef"
 alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg"
 alias peda="gdb --nh -ix ~/.gdbinit_peda"
