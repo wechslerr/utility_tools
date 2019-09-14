@@ -19,7 +19,6 @@ sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
-echo export PATH=$HOME/bin:$PATH >> ~/.bashrc
 mkdir $HOME/bin
 wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
 chmod +x $HOME/bin/rp
