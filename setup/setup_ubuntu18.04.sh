@@ -106,7 +106,7 @@ cd $HOME
 # you shoud write these in ~/.bashrc
 
 << COMMENTOUT
-export PATH=$HOME/bin:$PATH >> ~/.bashrc
+export PATH=$HOME/bin:$PATH
 alias gef="gdb --nh -ix ~/.gdbinit_gef"
 alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg"
 alias peda="gdb --nh -ix ~/.gdbinit_peda"
