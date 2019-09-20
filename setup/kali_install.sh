@@ -111,6 +111,11 @@ git clone https://github.com/pentestmonkey/unix-privesc-check
 git clone https://github.com/mzet-/linux-exploit-suggester
 git clone https://github.com/jondonas/linux-exploit-suggester-2
 git clone https://github.com/rebootuser/LinEnum
+git clone https://github.com/sqlmapproject/sqlmap
+git clone https://github.com/secretsquirrel/the-backdoor-factory
+
+cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
+chmod +x /root/bin/backdoor.py
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
@@ -118,7 +123,7 @@ cp /etc/resolv.conf resolv.conf.bak
 cd $HOME
 git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
-chmod +x $HOME/bin/msfvenom_maker
+chmod +x /bin/msfvenom_maker
 
 cd /usr/share/wordlists
 git clone https://github.com/danielmiessler/SecLists
