@@ -120,6 +120,9 @@ git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x $HOME/bin/msfvenom_maker
 
+cd /usr/share/wordlists
+git clone https://github.com/danielmiessler/SecLists
+
 cd $HOME
 
 # chsh -s /usr/bin/zsh
