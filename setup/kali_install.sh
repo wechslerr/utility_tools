@@ -133,6 +133,8 @@ git clone https://github.com/danielmiessler/SecLists
 
 cd $HOME
 
+gunzip /usr/share/wordlists/rockyou.txt.gz
+
 # chsh -s /usr/bin/zsh
 
 # you shoud write these in ~/.bashrc
