@@ -113,6 +113,7 @@ git clone https://github.com/jondonas/linux-exploit-suggester-2
 git clone https://github.com/rebootuser/LinEnum
 git clone https://github.com/sqlmapproject/sqlmap
 git clone https://github.com/secretsquirrel/the-backdoor-factory
+git clone https://github.com/J3wker/DLLicous-MaliciousDLL
 
 cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
 chmod +x /root/bin/backdoor.py
