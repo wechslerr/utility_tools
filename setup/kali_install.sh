@@ -5,6 +5,7 @@
 sudo add-apt-repository ppa:webupd8team/terminix -y
 sudo apt-get update -y
 sudo apt-get install tilix -y
+sudo apt-get install fcrackzip -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
