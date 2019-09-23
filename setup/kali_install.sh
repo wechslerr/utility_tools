@@ -114,6 +114,7 @@ git clone https://github.com/rebootuser/LinEnum
 git clone https://github.com/sqlmapproject/sqlmap
 git clone https://github.com/secretsquirrel/the-backdoor-factory
 git clone https://github.com/J3wker/DLLicous-MaliciousDLL
+git clone https://github.com/J3wker/anti-CSRF_Token-Bruteforce
 
 cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
 chmod +x /root/bin/backdoor.py
