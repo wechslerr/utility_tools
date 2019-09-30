@@ -23,7 +23,7 @@ sudo mv cmake-3.15.3-Linux-x86_64 /opt
 rm -rf cmake-3.15.3-Linux-x86_64
 sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential steghide -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
 
