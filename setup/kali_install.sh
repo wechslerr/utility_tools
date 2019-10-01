@@ -132,7 +132,7 @@ cd /usr/share/wordlists
 git clone https://github.com/danielmiessler/SecLists
 
 cd $HOME
-
+yes | python3 -m pip install stegcracker
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
 # chsh -s /usr/bin/zsh
