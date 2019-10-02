@@ -7,6 +7,8 @@
 
 # When the license agreement for cmake appears, enter q, y, y
 
+sudo apt-get update- y
+
 cd $HOME
 sudo add-apt-repository ppa:webupd8team/terminix -y
 sudo add-apt-repository ppa:openjdk-r/ppa
