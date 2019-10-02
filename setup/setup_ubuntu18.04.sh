@@ -5,7 +5,9 @@
 
 # if you copy setup.sh from windows to ubuntu, you need "sed -i 's/\r//' setup_ubuntu18.04.sh"
 
-# When the license agreement for cmake appears, enter q, y, y
+# When the license agreement for cmake appears, enter q, y, 
+
+sudo apt-get update -y
 
 mkdir install
 cd install
