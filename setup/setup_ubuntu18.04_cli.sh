@@ -43,6 +43,9 @@ sudo r2pm init
 sudo r2pm update
 sudo r2pm -i r2ghidra-dec
 
+sudo apt-get install python3 python3-dev python3-pip git -y
+yes | python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+
 cd $HOME
 git clone https://github.com/Ganapati/RsaCtfTool
 git clone https://github.com/hugsy/gef
