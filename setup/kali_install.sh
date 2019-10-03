@@ -2,9 +2,11 @@
 
 # if you copy setup.sh from windows to kali, you need "sed -i 's/\r//' kali_install.sh"
 
+cd $HOME
+sudo apt-get update -y
+
 sudo add-apt-repository ppa:webupd8team/terminix -y
 sudo apt-get update -y
-sudo apt-get install tilix -y
 sudo apt-get install fcrackzip steghide -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
@@ -26,6 +28,9 @@ sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential steghide -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
+
+apt-get install python3 python3-dev python3-pip git
+python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
 cd $HOME
 wget https://github.com/radareorg/cutter/releases/download/v1.9.0/Cutter-v1.9.0-x64.Linux.AppImage
@@ -75,7 +80,7 @@ yes | python3 -m pip install -r requirements.txt
 cd $HOME
 sudo add-apt-repository ppa:webupd8team/terminix -y
 sudo apt-get update -y
-sudo apt-get install tilix -y
+sudo apt-get install tilix tmux -y
 
 cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -96,6 +101,9 @@ cd powershell
 git clone https://github.com/cheetz/Easy-P
 git clone https://github.com/PowerShellMafia/PowerSploit
 git clone https://github.com/samratashok/nishang
+git clone https://github.com/Cn33liz/p0wnedShell
+git clone https://github.com/n1nj4sec/pupy
+
 
 cd $HOME
 apt-get install gobuster -y
@@ -116,12 +124,22 @@ git clone https://github.com/sqlmapproject/sqlmap
 git clone https://github.com/secretsquirrel/the-backdoor-factory
 git clone https://github.com/J3wker/DLLicous-MaliciousDLL
 git clone https://github.com/J3wker/anti-CSRF_Token-Bruteforce
+git clone https://github.com/trustedsec/ptf 
+git clone https://github.com/leebaird/discover
+
 
 cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
 chmod +x /root/bin/backdoor.py
+cp $HOME/tools/ptf /root/bin
+chmod +x /root/bin/ptf
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
+
+cd $HOME
+git clone https://github.com/EmpireProject/Empire
+cd Empire
+./setup/install.sh
 
 cd $HOME
 git clone https://github.com/Yunolay/msfvenom_maker
