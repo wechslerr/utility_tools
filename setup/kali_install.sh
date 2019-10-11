@@ -146,6 +146,11 @@ git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
+cd $HOME
+git clone https://github.com/Yunolay/port_scan_selector
+cp msfvenom_maker/msfvenom_maker $HOME/bin/port_scan_selector
+chmod +x /bin/port_scan_selector
+
 cd /usr/share/wordlists
 git clone https://github.com/danielmiessler/SecLists
 
