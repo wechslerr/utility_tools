@@ -19,7 +19,7 @@ sudo mv cmake-3.15.3-Linux-x86_64 /opt
 rm -rf cmake-3.15.3-Linux-x86_64
 sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
-sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
+sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim curl -y
 git clone https://github.com/longld/peda.git ~/peda
 mkdir $HOME/bin
 wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
@@ -76,11 +76,6 @@ git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libglib2.0-dev libc6-dbg -y
 yes | python3 -m pip install -r requirements.txt
-
-cd $HOME
-sudo add-apt-repository ppa:webupd8team/terminix -y
-sudo apt-get update -y
-sudo apt-get install tilix -y
 
 cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
