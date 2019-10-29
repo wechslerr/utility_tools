@@ -61,7 +61,7 @@ sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zs
 yes | sudo python3 -m pip install angr
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.0.4_PUBLIC_20190516.zip
+wget https://ghidra-sre.org/ghidra_9.1-BETA_DEV_20190923.zip
 unzip ghidra_9.0.4_PUBLIC_20190516.zip
 rm ghidra_9.0.4_PUBLIC_20190516.zip
 
