@@ -25,7 +25,7 @@ mkdir $HOME/bin
 wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
 chmod +x $HOME/bin/rp
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential binwalk -y
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential binwalk libimage-exiftool-perl -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
 
