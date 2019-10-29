@@ -110,6 +110,8 @@ echo alias gef="gdb --nh -ix ~/.gdbinit_gef" >> ~/.bashrc
 echo alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg" >> ~/.bashrc
 echo alias peda="gdb --nh -ix ~/.gdbinit_peda" >> ~/.bashrc
 
+source ~/.bashrc
+
 # if you use zsh, you shoud write these in ~/.zshrc
 # chsh -s /usr/bin/zsh
 
