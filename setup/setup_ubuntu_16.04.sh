@@ -32,8 +32,8 @@ rm -rf cmake-3.15.3-Linux-x86_64
 sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
-sudo yes | sudo pip install --upgrade pip
-sudo yes | sudo pip install --upgrade pwntools
+yes | sudo pip install --upgrade pip
+yes | sudo pip install --upgrade pwntools
 
 mkdir $HOME/tools
 mkdir $HOME/tools/Stegsolve
@@ -64,10 +64,10 @@ git clone https://github.com/Ganapati/RsaCtfTool
 git clone https://github.com/hugsy/gef
 
 sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zsh curl openjdk-11-jdk -y
-sudo yes | sudo python3 -m pip install angr
+yes | sudo python3 -m pip install angr
 
 sudo apt-get install python3 python3-dev python3-pip git -y
-sudo yes | python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+yes | sudo python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
 cd $HOME
 wget https://ghidra-sre.org/ghidra_9.0.4_PUBLIC_20190516.zip
