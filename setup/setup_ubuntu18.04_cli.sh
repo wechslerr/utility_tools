@@ -25,7 +25,7 @@ mkdir $HOME/bin
 wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
 chmod +x $HOME/bin/rp
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential binwalk libimage-exiftool-perl -y
 yes | sudo pip install --upgrade pip
 yes | sudo pip install --upgrade pwntools
 
@@ -44,7 +44,7 @@ sudo r2pm update
 sudo r2pm -i r2ghidra-dec
 
 sudo apt-get install python3 python3-dev python3-pip git -y
-yes | python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+yes | sudo python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
 cd $HOME
 git clone https://github.com/Ganapati/RsaCtfTool
@@ -53,7 +53,7 @@ git clone https://github.com/hugsy/gef
 sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zsh curl openjdk-11-jdk -y
 yes | sudo python3 -m pip install angr
 sudo apt-get install python3 python3-dev python3-pip git -y
-yes | pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+yes | sudo pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
 
 cd $HOME
@@ -75,7 +75,7 @@ cd $HOME
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libglib2.0-dev libc6-dbg -y
-yes | python3 -m pip install -r requirements.txt
+yes | sudo python3 -m pip install -r requirements.txt
 
 cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -92,9 +92,12 @@ cd libc-database
 
 cd $HOME
 
-# chsh -s /usr/bin/zsh
+echo alias gef="gdb --nh -ix ~/.gdbinit_gef" >> ~/.bashrc
+echo alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg" >> ~/.bashrc
+echo alias peda="gdb --nh -ix ~/.gdbinit_peda" >> ~/.bashrc
 
-# you shoud write these in ~/.bashrc
+# chsh -s /usr/bin/zsh
+# if you use zsh, you shoud write these in ~/.zshrc
 
 << COMMENTOUT
 export PATH=$HOME/bin:$PATH
