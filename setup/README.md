@@ -5,5 +5,5 @@ sh -c "$(curl -fsSL https://github.com/Yunolay/utility_tools/raw/master/setup/se
 CUI  
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Yunolay/utility_tools/master/setup/setup_ubuntu18.04_cli.sh)"
 
-Kali
+Kali  
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Yunolay/utility_tools/master/setup/kali_install.sh)"
