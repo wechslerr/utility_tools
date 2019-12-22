@@ -21,9 +21,6 @@ sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
-mkdir $HOME/bin
-wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
-chmod +x $HOME/bin/rp
 
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential binwalk libimage-exiftool-perl -y
 yes | sudo pip install --upgrade pip
@@ -35,6 +32,8 @@ cd $HOME/tools
 git clone https://github.com/volatilityfoundation/volatility
 git clone https://github.com/sqlmapproject/sqlmap
 wget http://www.caesum.com/handbook/Stegsolve.jar -O $HOME/tools/Stegsolve/stegsolve.jar
+wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/tools/rp
+chmod +x $HOME/tools/rp
 chmod +x stegsolve.jar
 echo -e '#!/bin/sh\njava -jar Stegsolve.jar' > $HOME/tools/Stegsolve/run
 
@@ -61,7 +60,7 @@ sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zs
 yes | sudo python3 -m pip install angr
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.1-BETA_DEV_20190923.zip
+wget https://ghidra-sre.org/ghidra_9.1_PUBLIC_20191023.zip
 unzip ghidra_9.0.4_PUBLIC_20190516.zip
 rm ghidra_9.0.4_PUBLIC_20190516.zip
 
@@ -87,11 +86,6 @@ sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libgli
 yes | sudo python3 -m pip install -r requirements.txt
 
 cd $HOME
-sudo add-apt-repository ppa:webupd8team/terminix -y
-sudo apt-get update -y
-sudo apt-get install tilix -y
-
-cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
@@ -99,7 +93,13 @@ cd $HOME
 sudo echo source ~/gef/gef.py > .gdbinit_gef
 sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
 
-cd $HOME
+cd $HOME/tools
+git clone https://github.com/JonathanSalwan/ROPgadget
+cd ROPgadget
+sudo python setup.py install
+
+cd $HOME/tools
+git clone https://github.com/xct/ropstar
 git clone https://github.com/niklasb/libc-database
 cd libc-database
 ./get
@@ -111,6 +111,8 @@ echo alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg" >> ~/.bashrc
 echo alias peda="gdb --nh -ix ~/.gdbinit_peda" >> ~/.bashrc
 
 source ~/.bashrc
+
+cp .gdbinit_pwndbg .gdbinit
 
 # if you use zsh, you shoud write these in ~/.zshrc
 # chsh -s /usr/bin/zsh

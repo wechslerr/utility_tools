@@ -22,8 +22,6 @@ sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim curl -y
 git clone https://github.com/longld/peda.git ~/peda
 mkdir $HOME/bin
-wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
-chmod +x $HOME/bin/rp
 
 sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential binwalk libimage-exiftool-perl -y
 yes | sudo pip install --upgrade pip
@@ -34,6 +32,8 @@ cd $HOME/tools
 git clone https://github.com/volatilityfoundation/volatility
 git clone https://github.com/sqlmapproject/sqlmap
 wget http://www.caesum.com/handbook/Stegsolve.jar -O $HOME/tools/Stegsolve/stegsolve.jar
+wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/tools/rp
+chmod +x $HOME/tools/rp
 
 cd $HOME
 git clone https://github.com/radare/radare2
@@ -59,7 +59,6 @@ yes | sudo pip3 install --upgrade git+https://github.com/arthaud/python3-pwntool
 cd $HOME
 git clone https://github.com/scwuaptx/Pwngdb
 cp ~/Pwngdb/.gdbinit ~/.gdbinit_peda
-cp ~/Pwngdb/.gdbinit ~/.gdbinit
 
 cd $HOME
 yes | sudo pip install docopt
@@ -85,7 +84,13 @@ cd $HOME
 sudo echo source ~/gef/gef.py > .gdbinit_gef
 sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
 
-cd $HOME
+cd $HOME/tools
+git clone https://github.com/JonathanSalwan/ROPgadget
+cd ROPgadget
+sudo python setup.py install
+
+cd $HOME/tools
+git clone https://github.com/xct/ropstar
 git clone https://github.com/niklasb/libc-database
 cd libc-database
 ./get
@@ -95,6 +100,8 @@ cd $HOME
 echo alias gef="gdb --nh -ix ~/.gdbinit_gef" >> ~/.bashrc
 echo alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg" >> ~/.bashrc
 echo alias peda="gdb --nh -ix ~/.gdbinit_peda" >> ~/.bashrc
+
+cp .gdbinit_pwndbg .gdbinit
 
 source ~/.bashrc
 
