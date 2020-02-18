@@ -127,6 +127,7 @@ git clone https://github.com/J3wker/anti-CSRF_Token-Bruteforce
 git clone https://github.com/trustedsec/ptf 
 git clone https://github.com/leebaird/discover
 git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-script
+git clone https://github.com/Tib3rius/AutoRecon
 
 cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
 chmod +x /root/bin/backdoor.py
