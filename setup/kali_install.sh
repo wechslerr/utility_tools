@@ -4,9 +4,6 @@
 
 cd $HOME
 sudo apt-get update -y
-
-sudo add-apt-repository ppa:webupd8team/terminix -y
-sudo apt-get update -y
 sudo apt-get install fcrackzip steghide -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
@@ -52,9 +49,9 @@ sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zs
 yes | sudo python3 -m pip install angr
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.0.4_PUBLIC_20190516.zip
-unzip ghidra_9.0.4_PUBLIC_20190516.zip
-rm ghidra_9.0.4_PUBLIC_20190516.zip
+wget https://ghidra-sre.org/ghidra_9.1.1_PUBLIC_20191218.zip
+unzip ghidra_9.1.1_PUBLIC_20191218.zip
+rm ghidra_9.1.1_PUBLIC_20191218.zip
 
 cd $HOME
 git clone https://github.com/scwuaptx/Pwngdb
@@ -80,7 +77,7 @@ yes | python3 -m pip install -r requirements.txt
 cd $HOME
 sudo add-apt-repository ppa:webupd8team/terminix -y
 sudo apt-get update -y
-sudo apt-get install tilix tmux -y
+sudo apt-get install tmux -y
 
 cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
