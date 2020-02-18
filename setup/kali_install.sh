@@ -141,7 +141,7 @@ cd Empire
 
 cd $HOME
 git clone https://github.com/Yunolay/msfvenom_maker
-cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
+cp msfvenom_maker/msfvenom_maker_xfce.sh $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
 cd $HOME
@@ -150,11 +150,11 @@ cp msfvenom_maker/msfvenom_maker $HOME/bin/port_scan_selector
 chmod +x /bin/port_scan_selector
 
 cd /usr/share/wordlists
-git clone https://github.com/danielmiessler/SecLists
+sudo git clone https://github.com/danielmiessler/SecLists
 
 cd $HOME
 yes | python3 -m pip install stegcracker
-gunzip /usr/share/wordlists/rockyou.txt.gz
+sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 
 # chsh -s /usr/bin/zsh
 
@@ -162,6 +162,7 @@ gunzip /usr/share/wordlists/rockyou.txt.gz
 
 << COMMENTOUT
 export PATH=$HOME/bin:$PATH
+alias open="xdg-open"
 alias gef="gdb --nh -ix ~/.gdbinit_gef"
 alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg"
 alias peda="gdb --nh -ix ~/.gdbinit_peda"
