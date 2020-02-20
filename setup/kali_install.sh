@@ -134,6 +134,8 @@ chmod +x /root/bin/ptf
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
 
+sudo gem install evil-winrm
+
 cd $HOME
 git clone https://github.com/EmpireProject/Empire
 cd Empire
