@@ -125,11 +125,9 @@ git clone https://github.com/trustedsec/ptf
 git clone https://github.com/leebaird/discover
 git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-script
 git clone https://github.com/Tib3rius/AutoRecon
-
-cp $HOME/tools/the-backdoor-factory/backdoor.py /root/bin
-chmod +x /root/bin/backdoor.py
-cp $HOME/tools/ptf /root/bin
-chmod +x /root/bin/ptf
+git clone https://github.com/SecureAuthCorp/impacket
+cd impacket
+sudo pip install .
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
