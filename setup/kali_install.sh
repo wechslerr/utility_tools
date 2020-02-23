@@ -69,6 +69,11 @@ sudo apt-get install ruby ruby-dev python3-pip rubygems -y
 sudo gem install one_gadget
 
 cd $HOME
+git clone https://github.com/Hackplayers/Empire-mod-Hackplayers
+cd Empire-mod-Hackplayers/setup
+sudo ./install.sh
+
+cd $HOME
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libglib2.0-dev libc6-dbg -y
