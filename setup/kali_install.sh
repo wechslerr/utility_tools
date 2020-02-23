@@ -147,7 +147,7 @@ chmod +x /bin/msfvenom_maker
 
 cd $HOME
 git clone https://github.com/Yunolay/port_scan_selector
-cp msfvenom_maker/msfvenom_maker $HOME/bin/port_scan_selector
+cp msfvenom_maker/port_scan_selector $HOME/bin/port_scan_selector
 chmod +x /bin/port_scan_selector
 
 cd /usr/share/wordlists
