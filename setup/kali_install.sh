@@ -4,7 +4,7 @@
 
 cd $HOME
 sudo apt-get update -y
-sudo apt-get install fcrackzip steghide -y
+sudo apt-get install fcrackzip steghide crackmapexec bloodhound -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
@@ -125,6 +125,7 @@ git clone https://github.com/trustedsec/ptf
 git clone https://github.com/leebaird/discover
 git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-script
 git clone https://github.com/Tib3rius/AutoRecon
+git clone https://github.com/BloodHoundAD/BloodHound
 git clone https://github.com/SecureAuthCorp/impacket
 cd impacket
 sudo pip install .
