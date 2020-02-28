@@ -105,7 +105,7 @@ git clone https://github.com/PowerShellMafia/PowerSploit
 git clone https://github.com/samratashok/nishang
 git clone https://github.com/Cn33liz/p0wnedShell
 git clone https://github.com/n1nj4sec/pupy
-
+git clone https://github.com/besimorhino/powercat
 
 cd $HOME
 apt-get install gobuster -y
