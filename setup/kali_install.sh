@@ -136,8 +136,7 @@ git clone https://github.com/SecureAuthCorp/impacket
 cd impacket
 sudo pip install .
 
-cd $HOME
-sudo ln -s $HOME/tools/dirsearch.py $HOME/bin
+sudo ln -s ~/tools/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
