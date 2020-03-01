@@ -108,9 +108,9 @@ git clone https://github.com/n1nj4sec/pupy
 git clone https://github.com/besimorhino/powercat
 
 cd $HOME
-apt-get install gobuster -y
-apt-get install filezilla -y
-apt-get install alacarte -y
+sudo apt-get install gobuster -y
+sudo apt-get install filezilla -y
+sudo apt-get install alacarte -y
 
 cd $HOME
 mkdir tools
