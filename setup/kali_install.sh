@@ -116,19 +116,15 @@ cd $HOME
 mkdir tools
 cd tools
 git clone https://github.com/internetwache/GitTools
-git clone https://github.com/DFC302/reverseme
 git clone https://github.com/GDSSecurity/Windows-Exploit-Suggester
 git clone https://github.com/pentestmonkey/unix-privesc-check
-git clone https://github.com/mzet-/linux-exploit-suggester
 git clone https://github.com/jondonas/linux-exploit-suggester-2
-git clone https://github.com/rebootuser/LinEnum
 git clone https://github.com/sqlmapproject/sqlmap
 git clone https://github.com/secretsquirrel/the-backdoor-factory
 git clone https://github.com/J3wker/DLLicous-MaliciousDLL
 git clone https://github.com/J3wker/anti-CSRF_Token-Bruteforce
 git clone https://github.com/trustedsec/ptf 
 git clone https://github.com/leebaird/discover
-git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-script
 git clone https://github.com/Tib3rius/AutoRecon
 git clone https://github.com/BloodHoundAD/BloodHound
 git clone https://github.com/maurosoria/dirsearch
@@ -137,6 +133,16 @@ cd impacket
 sudo pip install .
 
 sudo ln -s ~/tools/dirsearch/dirsearch.py ~/bin/dirsearch.py
+
+cd $HOME
+mkdir enum
+cd enum
+git clone https://github.com/rebootuser/LinEnum
+git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-script
+git clone https://github.com/mzet-/linux-exploit-suggester
+git clone https://github.com/PowerShellMafia/PowerSploit
+git clone https://github.com/diego-treitos/linux-smart-enumeration
+git clone https://github.com/DominicBreuker/pspy
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
