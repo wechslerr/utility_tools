@@ -137,6 +137,9 @@ cd impacket
 sudo pip install .
 
 cd $HOME
+sudo ln -s $HOME/tools/dirsearch.py $HOME/bin
+
+cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
 
 sudo gem install evil-winrm
