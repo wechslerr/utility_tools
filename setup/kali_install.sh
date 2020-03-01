@@ -142,7 +142,7 @@ git clone https://github.com/carlospolop/linux-privilege-escalation-awsome-scrip
 git clone https://github.com/mzet-/linux-exploit-suggester
 git clone https://github.com/PowerShellMafia/PowerSploit
 git clone https://github.com/diego-treitos/linux-smart-enumeration
-git clone https://github.com/DominicBreuker/pspy
+wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 
 cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
