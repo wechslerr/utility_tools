@@ -149,6 +149,12 @@ cd pspy
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 
 cd $HOME
+sudo git clone https://github.com/carlospolop/legion.git /opt/legion
+cd /opt/legion/git
+sudo ./install.sh
+sudo ln -s /opt/legion/legion.py /usr/bin/legion.py
+
+cd $HOME
 cp /etc/resolv.conf resolv.conf.bak
 
 sudo gem install evil-winrm
