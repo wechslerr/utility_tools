@@ -146,7 +146,8 @@ git clone https://github.com/PowerShellMafia/PowerSploit
 git clone https://github.com/diego-treitos/linux-smart-enumeration
 mkdir pspy
 cd pspy
-wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
+wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64s
+wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32s
 
 cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
