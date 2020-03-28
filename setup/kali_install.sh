@@ -136,6 +136,11 @@ sudo pip install .
 
 sudo ln -s ~/tools/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
+cd cd $HOME/tools
+mkdir mimikatz
+cd mimikatz
+wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20200308/mimikatz_trunk.zip
+
 cd $HOME
 mkdir enum
 cd enum
