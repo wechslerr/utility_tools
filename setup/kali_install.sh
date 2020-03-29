@@ -4,9 +4,7 @@
 
 cd $HOME
 sudo apt-get update -y
-sudo apt-get install fcrackzip steghide crackmapexec bloodhound golang-go -y
-
-sudo go get github.com/ffuf/ffuf
+sudo apt-get install fcrackzip steghide crackmapexec bloodhound -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
