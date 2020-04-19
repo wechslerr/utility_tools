@@ -141,7 +141,7 @@ mkdir fuff
 cd fuff
 wget https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
 tar -zxvf ffuf_1.0.2_linux_amd64.tar.gz
-sudo ln -s ~/tools/fuff/ffuf ~/bin/fuff
+sudo ln -s ~/tools/ffuf/ffuf ~/bin/ffuf
 
 sudo ln -s ~/tools/dirsearch/dirsearch.py ~/bin/dirsearch.py
 
