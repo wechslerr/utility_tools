@@ -141,9 +141,9 @@ mkdir ffuf
 cd ffuf
 wget https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
 tar -zxvf ffuf_1.0.2_linux_amd64.tar.gz
-sudo ln -s ~/tools/ffuf/ffuf ~/bin/ffuf
+sudo ln -s /home/kali/tools/ffuf/ffuf /home/kali/bin/ffuf
 
-sudo ln -s ~/tools/dirsearch/dirsearch.py ~/bin/dirsearch.py
+sudo ln -s /home/kali/tools/dirsearch/dirsearch.py /home/kali/bin/dirsearch.py
 
 cd cd $HOME/tools
 mkdir mimikatz
