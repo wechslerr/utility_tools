@@ -182,12 +182,12 @@ cd Empire
 
 cd $HOME
 git clone https://github.com/Yunolay/msfvenom_maker
-cp msfvenom_maker/msfvenom_maker_xfce.sh $HOME/bin/msfvenom_maker
+cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
 cd $HOME
 git clone https://github.com/Yunolay/port_scan_selector
-cp msfvenom_maker/port_scan_selector $HOME/bin/port_scan_selector
+cp port_scan_selector/port_scan_selector $HOME/bin/port_scan_selector
 chmod +x /bin/port_scan_selector
 
 cd /usr/share/wordlists
