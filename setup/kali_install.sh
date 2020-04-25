@@ -137,8 +137,8 @@ git clone https://github.com/SecureAuthCorp/impacket
 cd impacket
 sudo pip install .
 
-mkdir fuff
-cd fuff
+mkdir ffuf
+cd ffuf
 wget https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
 tar -zxvf ffuf_1.0.2_linux_amd64.tar.gz
 sudo ln -s ~/tools/ffuf/ffuf ~/bin/ffuf
