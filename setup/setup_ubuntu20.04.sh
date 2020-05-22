@@ -99,6 +99,8 @@ mkdir build
 cd build
 ../make-share.sh
 sudo make install
+../bindings/python/
+sudo make install3
 cd $HOME
 rm 0.9.1.tar.gz
 
