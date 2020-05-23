@@ -172,7 +172,7 @@ cd windows
 git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester
 cd Windows-Exploit-Suggester
 ./windows-exploit-suggester.py --update
-yes | pip install xlrd --upgrade
+yes | pip3 install xlrd --upgrade
 
 cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
