@@ -165,6 +165,16 @@ wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32
 
 cd $HOME
+mkdir "privelage escalation"
+cd "privelage escalation"
+mkdir windows
+cd windows
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+cd Windows-Exploit-Suggester
+./windows-exploit-suggester.py --update
+yes | pip install xlrd --upgrade
+
+cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
 cd /opt/legion/git
 sudo ./install.sh
