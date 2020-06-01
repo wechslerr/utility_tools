@@ -169,6 +169,8 @@ mkdir "privelage escalation"
 cd "privelage escalation"
 mkdir windows
 cd windows
+git clone https://github.com/abatchy17/WindowsExploits
+git  clone https://github.com/SecWiki/windows-kernel-exploits
 git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester
 cd Windows-Exploit-Suggester
 ./windows-exploit-suggester.py --update
