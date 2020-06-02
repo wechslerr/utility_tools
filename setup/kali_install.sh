@@ -98,7 +98,6 @@ sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
 cd $HOME
 git clone https://github.com/niklasb/libc-database
 cd libc-database
-./get
 
 cd $HOME
 mkdir powershell
