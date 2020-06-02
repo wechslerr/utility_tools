@@ -24,12 +24,10 @@ sudo ln -s /opt/cmake-3.15.3-Linux-x86_64/bin/* /usr/bin
 cd $HOME
 rm -rf install
 
-sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
-yes | sudo pip install --upgrade pip
-yes | sudo pip install --upgrade pwntools
-
-apt-get install python3 python3-dev python3-pip git
-python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+apt-get update
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade git+https://github.com/Gallopsled/pwntools.git@dev
 
 cd $HOME
 wget https://github.com/radareorg/cutter/releases/download/v1.9.0/Cutter-v1.9.0-x64.Linux.AppImage
