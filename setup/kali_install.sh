@@ -174,6 +174,14 @@ cd Windows-Exploit-Suggester
 yes | pip install xlrd --upgrade
 
 cd $HOME
+cd "privelage escalation"
+mkidr linux
+cd linux
+git clone https://github.com/SecWiki/linux-kernel-exploits
+wget https://raw.githubusercontent.com/dirtycow/dirtycow.github.io/master/dirtyc0w.c
+gcc -pthread dirtyc0w.c -o dirtyc0w
+
+cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
 cd /opt/legion/git
 sudo ./install.sh
