@@ -38,8 +38,8 @@ chmod +x stegsolve.jar
 echo -e '#!/bin/sh\njava -jar Stegsolve.jar' > $HOME/tools/Stegsolve/run
 
 cd $HOME
-wget https://github.com/radareorg/cutter/releases/download/v1.9.0/Cutter-v1.9.0-x64.Linux.AppImage
-chmod +x Cutter-v1.9.0-x64.Linux.AppImage
+wget https://github.com/radareorg/cutter/releases/download/v1.10.3/Cutter-v1.10.3-x64.Linux.AppImage
+chmod +x Cutter-v1.10.3-x64.Linux.AppImage
 
 cd $HOME
 git clone https://github.com/radare/radare2
