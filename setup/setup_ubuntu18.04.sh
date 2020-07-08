@@ -53,8 +53,10 @@ cd $HOME
 git clone https://github.com/Ganapati/RsaCtfTool
 git clone https://github.com/hugsy/gef
 
-sudo apt-get install python3 python3-dev python3-pip git -y
-yes | sudo python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
+apt-get update
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+yes | sudo python3 -m pip install --upgrade pip
+yes | sudo python3 -m pip install --upgrade pwntools
 
 sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zsh curl openjdk-11-jdk -y
 yes | sudo python3 -m pip install angr
