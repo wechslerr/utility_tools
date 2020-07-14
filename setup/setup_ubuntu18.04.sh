@@ -92,8 +92,8 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 cd $HOME
-sudo echo source ~/gef/gef.py > .gdbinit_gef
-sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
+echo source ~/gef/gef.py > .gdbinit_gef
+echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
 
 cd $HOME/tools
 git clone https://github.com/JonathanSalwan/ROPgadget
