@@ -202,13 +202,7 @@ git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
-cd $HOME
-git clone https://github.com/Yunolay/port_scan_selector
-cp port_scan_selector/port_scan_selector $HOME/bin/port_scan_selector
-chmod +x /bin/port_scan_selector
-
-cd /usr/share/wordlists
-sudo git clone https://github.com/danielmiessler/SecLists
+sudo apt-get install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
 
 cd $HOME
 yes | python3 -m pip install stegcracker
