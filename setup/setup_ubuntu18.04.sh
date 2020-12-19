@@ -62,9 +62,9 @@ sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zs
 yes | sudo python3 -m pip install angr
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.1_PUBLIC_20191023.zip
-unzip ghidra_9.0.4_PUBLIC_20190516.zip
-rm ghidra_9.0.4_PUBLIC_20190516.zip
+wget https://www.ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+unzip ghidra_9.2_PUBLIC_20201113.zip
+rm ghidra_9.2_PUBLIC_20201113.zip
 
 cd $HOME
 git clone https://github.com/scwuaptx/Pwngdb
