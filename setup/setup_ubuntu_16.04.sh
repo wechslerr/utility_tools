@@ -70,9 +70,9 @@ sudo apt-get install python3 python3-dev python3-pip git -y
 yes | sudo python3 -m pip install --upgrade git+https://github.com/arthaud/python3-pwntools.git
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.0.4_PUBLIC_20190516.zip
-unzip ghidra_9.0.4_PUBLIC_20190516.zip
-rm ghidra_9.0.4_PUBLIC_20190516.zip
+wget https://www.ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+unzip ghidra_9.2_PUBLIC_20201113.zip
+rm ghidra_9.2_PUBLIC_20201113.zip
 
 cd $HOME
 git clone https://github.com/scwuaptx/Pwngdb
