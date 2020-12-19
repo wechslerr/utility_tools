@@ -49,9 +49,9 @@ sudo apt-get install python3-dev libffi-dev build-essential virtualenvwrapper zs
 yes | sudo python3 -m pip install angr
 
 cd $HOME
-wget https://ghidra-sre.org/ghidra_9.1.1_PUBLIC_20191218.zip
-unzip ghidra_9.1.1_PUBLIC_20191218.zip
-rm ghidra_9.1.1_PUBLIC_20191218.zip
+wget https://www.ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip
+unzip ghidra_9.2_PUBLIC_20201113.zip
+rm ghidra_9.2_PUBLIC_20201113.zip
 
 cd $HOME
 wget https://github.com/Konloch/bytecode-viewer/releases/download/v2.9.22/Bytecode-Viewer-2.9.22.jar
