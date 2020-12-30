@@ -89,8 +89,8 @@ sudo apt-get install tmux -y
 cd $HOME
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
-sudo apt update
-sudo apt remove docker docker-engine docker.io
+sudo apt update -y
+sudo apt remove docker docker-engine docker.io -y
 sudo apt install docker-ce -y
 
 cd $HOME
@@ -209,11 +209,7 @@ git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
-<<<<<<< HEAD
-sudo apt install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf
-=======
 sudo apt-get install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
->>>>>>> af5aab7e87dee0967ffc281aacc54d84c0ee2c30
 
 cd $HOME
 yes | python3 -m pip install stegcracker
