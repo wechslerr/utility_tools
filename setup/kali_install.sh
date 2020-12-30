@@ -80,6 +80,7 @@ git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 sudo apt-get -y install gdb python-dev python3-dev python-pip python3-pip libglib2.0-dev libc6-dbg -y
 yes | python3 -m pip install -r requirements.txt
+./setup.sh
 
 cd $HOME
 sudo add-apt-repository ppa:webupd8team/terminix -y
@@ -100,7 +101,7 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 cd $HOME
 echo source ~/gef/gef.py > .gdbinit_gef
 echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
-echo source ~/pwndbg/gdbinit.py ~/.gdbinit
+echo source ~/pwndbg/gdbinit.py > ~/.gdbinit
 
 cd $HOME
 git clone https://github.com/niklasb/libc-database
