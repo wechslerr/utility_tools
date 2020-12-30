@@ -4,7 +4,7 @@
 
 cd $HOME
 sudo apt-get update -y
-sudo apt-get install fcrackzip steghide crackmapexec bloodhound -y
+sudo apt-get install gdb fcrackzip steghide crackmapexec bloodhound -y
 
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
@@ -59,7 +59,6 @@ wget https://github.com/Konloch/bytecode-viewer/releases/download/v2.9.22/Byteco
 cd $HOME
 git clone https://github.com/scwuaptx/Pwngdb
 cp ~/Pwngdb/.gdbinit ~/.gdbinit_peda
-cp ~/Pwngdb/.gdbinit ~/.gdbinit
 
 cd $HOME
 yes | sudo pip install docopt
@@ -88,12 +87,20 @@ sudo apt-get update -y
 sudo apt-get install tmux -y
 
 cd $HOME
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt update
+sudo apt remove docker docker-engine docker.io
+sudo apt install docker-ce -y
+
+cd $HOME
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 cd $HOME
-sudo echo source ~/gef/gef.py > .gdbinit_gef
-sudo echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
+echo source ~/gef/gef.py > .gdbinit_gef
+echo source ~/pwndbg/gdbinit.py > .gdbinit_pwndbg
+echo source ~/pwndbg/gdbinit.py ~/.gdbinit
 
 cd $HOME
 git clone https://github.com/niklasb/libc-database
@@ -202,7 +209,11 @@ git clone https://github.com/Yunolay/msfvenom_maker
 cp msfvenom_maker/msfvenom_maker $HOME/bin/msfvenom_maker
 chmod +x /bin/msfvenom_maker
 
+<<<<<<< HEAD
+sudo apt install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf
+=======
 sudo apt-get install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf -y
+>>>>>>> af5aab7e87dee0967ffc281aacc54d84c0ee2c30
 
 cd $HOME
 yes | python3 -m pip install stegcracker
@@ -218,6 +229,7 @@ alias open="xdg-open"
 alias gef="gdb --nh -ix ~/.gdbinit_gef"
 alias pwndbg="gdb --nh -ix ~/.gdbinit_pwndbg"
 alias peda="gdb --nh -ix ~/.gdbinit_peda"
+alias rustscan='sudo docker run -it --rm --name rustscan cmnatic/rustscan:debian-buster rustscan'
 COMMENTOUT
 
 # after write bashrc you need source ~/.bashrc
