@@ -186,8 +186,8 @@ cd "privelage escalation"
 mkidr linux
 cd linux
 git clone https://github.com/SecWiki/linux-kernel-exploits
-wget https://raw.githubusercontent.com/dirtycow/dirtycow.github.io/master/dirtyc0w.c
-gcc -pthread dirtyc0w.c -o dirtyc0w
+wget https://raw.githubusercontent.com/FireFart/dirtycow/master/dirty.c
+gcc -pthread dirty.c -o dirty
 
 cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
