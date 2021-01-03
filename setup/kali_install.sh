@@ -187,7 +187,7 @@ mkidr linux
 cd linux
 git clone https://github.com/SecWiki/linux-kernel-exploits
 wget https://raw.githubusercontent.com/FireFart/dirtycow/master/dirty.c
-gcc -pthread dirty.c -o dirty
+gcc -pthread dirty.c -o dirty -lcrypt
 
 cd $HOME
 sudo git clone https://github.com/carlospolop/legion.git /opt/legion
