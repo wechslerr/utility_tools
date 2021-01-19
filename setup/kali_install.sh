@@ -139,9 +139,17 @@ git clone https://github.com/Tib3rius/AutoRecon
 git clone https://github.com/BloodHoundAD/BloodHound
 git clone https://github.com/maurosoria/dirsearch
 git clone https://github.com/SecureAuthCorp/impacket
+git clone https://github.com/java-decompiler/jd-gui.git
 cd impacket
 sudo pip install .
 
+cd $HOME
+cd tools
+cd jd-gui
+./gradlew build 
+
+cd $HOME
+cd tools
 mkdir ffuf
 cd ffuf
 wget https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
