@@ -140,6 +140,7 @@ git clone https://github.com/BloodHoundAD/BloodHound
 git clone https://github.com/maurosoria/dirsearch
 git clone https://github.com/SecureAuthCorp/impacket
 git clone https://github.com/java-decompiler/jd-gui.git
+git clone https://github.com/trustedsec/unicorn
 cd impacket
 sudo pip install .
 
@@ -158,6 +159,7 @@ tar -zxvf ffuf_1.0.2_linux_amd64.tar.gz
 ln -s /home/kali/tools/ffuf/ffuf /home/kali/bin/ffuf
 ln -s /home/kali/tools/AutoRecon/src/autorecon/autorecon.py /home/kali/bin/autorecon
 ln -s /home/kali/tools/dirsearch/dirsearch.py /home/kali/bin/dirsearch.py
+ln -s /home/kali/tools/unicorn/unicorn.py /home/kali/bin/unicorn.py
 
 cd cd $HOME/tools
 mkdir mimikatz
