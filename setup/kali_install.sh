@@ -122,6 +122,8 @@ git clone https://github.com/samratashok/nishang
 git clone https://github.com/Cn33liz/p0wnedShell
 git clone https://github.com/n1nj4sec/pupy
 git clone https://github.com/besimorhino/powercat
+git clone https://github.com/puckiestyle/powershell
+git clone https://github.com/NetSPI/PowerUpSQL
 
 cd $HOME
 sudo apt-get install gobuster -y
