@@ -6,6 +6,12 @@ cd $HOME
 sudo apt-get update -y
 sudo apt-get install gdb fcrackzip steghide crackmapexec bloodhound -y
 
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
 sudo apt-get install build-essential gcc-multilib git gdb nasm libc6:i386 vim -y
 git clone https://github.com/longld/peda.git ~/peda
 mkdir $HOME/bin
